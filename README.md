@@ -1,91 +1,150 @@
-# Welcome to Your Miaoda Project
+# Kasipathi Avinash Reddy - Portfolio Website
 
-## Project Info
+A clean, modern, and professional personal portfolio website showcasing skills, projects, achievements, and contact information.
 
-## Project Directory
+## ✨ Features
 
-```
-├── README.md # Documentation
-├── components.json # Component library configuration
-├── index.html # Entry file
-├── package.json # Package management
-├── postcss.config.js # PostCSS configuration
-├── public # Static resources directory
-│   ├── favicon.png # Icon
-│   └── images # Image resources
-├── src # Source code directory
-│   ├── App.tsx # Entry file
-│   ├── components # Components directory
-│   ├── context # Context directory
-│   ├── db # Database configuration directory
-│   ├── hooks # Common hooks directory
-│   ├── index.css # Global styles
-│   ├── layout # Layout directory
-│   ├── lib # Utility library directory
-│   ├── main.tsx # Entry file
-│   ├── routes.tsx # Routing configuration
-│   ├── pages # Pages directory
-│   ├── services # Database interaction directory
-│   ├── types # Type definitions directory
-├── tsconfig.app.json # TypeScript frontend configuration file
-├── tsconfig.json # TypeScript configuration file
-├── tsconfig.node.json # TypeScript Node.js configuration file
-└── vite.config.ts # Vite configuration file
-```
+### 🎨 Design Highlights
+- **Custom Color Scheme**: Soft whitish-blue gradient background with deep blue and soft purple accents
+- **Glassmorphism Effects**: Modern glass-like cards with backdrop blur
+- **Rainbow Smoke Particles**: Interactive particle system that follows mouse cursor with smooth rainbow trails
+- **Smooth Animations**: Fade-in animations on scroll using Intersection Observer API
+- **Responsive Design**: Mobile-first approach with seamless adaptation from mobile to desktop
 
-## Tech Stack
+### 📱 Sections
+1. **Hero Section**: Profile photo with animated floating effect, name, title, and professional tagline
+2. **About Me**: Professional summary with key highlights in interactive cards
+3. **Skills**: Technical skills organized by category with hover effects
+4. **Projects**: Featured projects with detailed descriptions and GitHub links
+   - Smart Plant Care Companion App
+   - Finger Vein Detection System
+5. **Achievements**: Certifications and recognitions
+   - Oracle Java SE 17 Certification
+   - Silver Medal in Coding Competition
+   - TechFest 2025 Project Presentation
+6. **Education**: Academic qualifications with percentages
+7. **Contact**: Multiple contact methods with social media links
+8. **Footer**: Copyright and quick navigation links
 
-Vite, TypeScript, React, Supabase
+### 🎯 Technical Features
+- **Performance Optimized**: 60fps animations with throttled rendering
+- **Mobile Responsive**: Optimized particle count for mobile devices
+- **Smooth Scrolling**: Native smooth scroll behavior
+- **Interactive Elements**: Hover effects with scale transforms and glows
+- **Semantic HTML**: Proper HTML5 structure for accessibility
 
-## Development Guidelines
+## 🛠️ Tech Stack
 
-### How to edit code locally?
+- **Frontend Framework**: React 18 with TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS with custom utilities
+- **UI Components**: shadcn/ui
+- **Icons**: Lucide React
+- **Animations**: CSS animations + Intersection Observer API
+- **Particle System**: HTML5 Canvas API
 
-You can choose [VSCode](https://code.visualstudio.com/Download) or any IDE you prefer. The only requirement is to have Node.js and npm installed.
-
-### Environment Requirements
-
-```
-# Node.js ≥ 20
-# npm ≥ 10
-Example:
-# node -v   # v20.18.3
-# npm -v    # 10.8.2
-```
-
-### Installing Node.js on Windows
+## 📂 Project Structure
 
 ```
-# Step 1: Visit the Node.js official website: https://nodejs.org/, click download. The website will automatically suggest a suitable version (32-bit or 64-bit) for your system.
-# Step 2: Run the installer: Double-click the downloaded installer to run it.
-# Step 3: Complete the installation: Follow the installation wizard to complete the process.
-# Step 4: Verify installation: Open Command Prompt (cmd) or your IDE terminal, and type `node -v` and `npm -v` to check if Node.js and npm are installed correctly.
+src/
+├── components/
+│   ├── portfolio/
+│   │   ├── Navigation.tsx      # Top navigation with smooth scroll
+│   │   ├── Hero.tsx            # Hero section with profile
+│   │   ├── About.tsx           # About me section
+│   │   ├── Skills.tsx          # Skills showcase
+│   │   ├── Projects.tsx        # Project portfolio
+│   │   ├── Achievements.tsx    # Achievements & certifications
+│   │   ├── Education.tsx       # Educational background
+│   │   ├── Contact.tsx         # Contact information
+│   │   └── Footer.tsx          # Footer component
+│   └── ui/
+│       └── rainbow-particles.tsx # Rainbow smoke particle effect
+├── pages/
+│   └── Portfolio.tsx           # Main portfolio page
+├── index.css                   # Global styles & design system
+└── routes.tsx                  # Route configuration
 ```
 
-### Installing Node.js on macOS
+## 🎨 Design System
 
+### Color Palette
+- **Background**: Soft whitish-blue (HSL: 220 60% 98%)
+- **Primary**: Deep blue (HSL: 221 83% 53%)
+- **Secondary**: Soft purple (HSL: 258 90% 66%)
+- **Accent**: Light blue (HSL: 220 50% 95%)
+
+### Custom Utilities
+- `.glass` - Glassmorphism effect with backdrop blur
+- `.gradient-text` - Gradient text from primary to secondary
+- `.animate-float` - Floating animation for hero image
+- `.animate-fade-in` - Fade-in animation for scroll reveals
+- `.glow-primary` / `.glow-secondary` - Glow effects for interactive elements
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js ≥ 20
+- npm ≥ 10
+
+### Installation
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev -- --host 127.0.0.1
+
+# Alternative start command
+npx vite --host 127.0.0.1
 ```
-# Step 1: Using Homebrew (Recommended method): Open Terminal. Type the command `brew install node` and press Enter. If Homebrew is not installed, you need to install it first by running the following command in Terminal:
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-Alternatively, use the official installer: Visit the Node.js official website. Download the macOS .pkg installer. Open the downloaded .pkg file and follow the prompts to complete the installation.
-# Step 2: Verify installation: Open Command Prompt (cmd) or your IDE terminal, and type `node -v` and `npm -v` to check if Node.js and npm are installed correctly.
+
+### Development
+
+```bash
+# Run linter
+npm run lint
+
+# Build for production
+npm run build
 ```
 
-### After installation, follow these steps:
+## 📱 Responsive Breakpoints
 
-```
-# Step 1: Download the code package
-# Step 2: Extract the code package
-# Step 3: Open the code package with your IDE and navigate into the code directory
-# Step 4: In the IDE terminal, run the command to install dependencies: npm i
-# Step 5: In the IDE terminal, run the command to start the development server: npm run dev -- --host 127.0.0.1
-# Step 6: if step 5 failed, try this command to start the development server: npx vite --host 127.0.0.1
-```
+- **Mobile**: < 640px (default styles)
+- **Desktop**: ≥ 1280px (xl: prefix)
 
-### How to develop backend services?
+The design uses a two-state responsive approach focusing on mobile and desktop experiences.
 
-Configure environment variables and install relevant dependencies.If you need to use a database, please use the official version of Supabase.
+## 🎭 Performance Optimizations
 
-## Learn More
+1. **Particle System**:
+   - Throttled to 60fps
+   - Reduced particle count on mobile (2 vs 3 per emission)
+   - Maximum particle limit (50 mobile, 100 desktop)
+   - Efficient canvas rendering with requestAnimationFrame
 
-You can also check the help documentation: Download and Building the app（ [https://intl.cloud.baidu.com/en/doc/MIAODA/s/download-and-building-the-app-en](https://intl.cloud.baidu.com/en/doc/MIAODA/s/download-and-building-the-app-en)）to learn more detailed content.
+2. **Animations**:
+   - CSS-based animations for better performance
+   - Intersection Observer for scroll-triggered animations
+   - Hardware-accelerated transforms
+
+3. **Images**:
+   - Lazy loading for images
+   - Optimized image sources
+
+## 🔗 Contact Information
+
+- **Email**: reddyavinash748@gmail.com
+- **Phone**: +91 93929 57011
+- **LinkedIn**: [linkedin.com/in/avinash-reddy-86146b252](https://linkedin.com/in/avinash-reddy-86146b252)
+- **GitHub**: [github.com/192211967](https://github.com/192211967)
+
+## 📄 License
+
+© 2025 Kasipathi Avinash Reddy. All rights reserved.
+
+---
+
+Made with ❤️ by Avinash Reddy
